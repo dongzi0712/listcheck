@@ -1,0 +1,264 @@
+/* 自定义样式 */
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+
+.table {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+    table-layout: fixed;
+    margin-bottom: 0;
+}
+
+.table th, .table td {
+    padding: 0.5rem 0.75rem;
+    vertical-align: middle;
+}
+
+.status-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 0.25em 0.5em;
+    font-size: 0.85em;
+    border-radius: 0.25rem;
+    min-width: 42px;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+.status-valid {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-invalid {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.platform-label {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    white-space: nowrap;
+}
+
+.platform-label i {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.platform-label span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 按钮组样式优化 */
+.btn-group-sm > .btn {
+    padding: .25rem .5rem;
+}
+
+.btn-group-sm > .btn i {
+    font-size: 0.875rem;
+}
+
+/* 操作按钮样式 */
+.action-buttons {
+    display: flex;
+    gap: 4px;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 110px;
+}
+
+.action-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.action-buttons .btn i {
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* 操作按钮悬停效果 */
+.action-buttons .btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.action-buttons .btn-outline-secondary:hover {
+    background-color: var(--bs-secondary);
+    color: white;
+}
+
+.action-buttons .btn-outline-danger:hover {
+    background-color: var(--bs-danger);
+    color: white;
+}
+
+/* 按钮禁用状态 */
+.action-buttons .btn:disabled,
+.action-buttons .btn.disabled {
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+/* 响应式优化 */
+@media (max-width: 992px) {
+    .table {
+        table-layout: auto;
+    }
+    
+    .link-title, .link-url {
+        min-width: 100px;
+    }
+
+    .time-cell {
+        font-size: 0.75rem;
+    }
+    
+    .time-cell .text-muted {
+        font-size: 0.75rem;
+    }
+    
+    .action-buttons {
+        min-width: auto;
+        gap: 2px;
+    }
+    
+    .action-buttons .btn {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .action-buttons .btn i {
+        font-size: 12px;
+    }
+}
+
+/* 表格内容溢出处理 */
+.text-truncate {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 复选框对齐 */
+.form-check {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-check-input {
+    margin: 0;
+}
+
+/* 链接标题和URL样式 */
+.link-title, .link-url {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    display: block;
+}
+
+.link-url a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 时间单元格样式 */
+.time-cell {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.time-cell .text-muted {
+    font-size: 0.875rem;
+    color: #999 !important;
+}
+
+/* 表格单元格通用样式 */
+.table td {
+    padding: 0.5rem;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+
+/* 搜索框样式 */
+.search-form {
+    margin-bottom: 1rem;
+}
+
+/* 分页样式 */
+.pagination {
+    margin-bottom: 0;
+}
+
+.pagination .page-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.pagination .page-link i {
+    font-size: 0.75rem;
+}
+
+.pagination .active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+/* 表格页脚样式 */
+.card-footer {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+
+/* 定时任务状态样式 */
+.cron-status {
+    line-height: 1.2;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+} 
