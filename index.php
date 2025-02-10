@@ -213,6 +213,9 @@ if (!empty($params)) {
                 <i class="bi bi-cloud me-2"></i>网盘链接管理
             </a>
             <div class="d-flex align-items-center">
+                <a href="user_manage.php" class="btn btn-light btn-sm me-2">
+                    <i class="bi bi-gear-fill me-1"></i>用户管理
+                </a>
                 <span class="text-light me-3">
                     <i class="bi bi-person-circle me-1"></i><?= htmlspecialchars($_SESSION['username']) ?>
                 </span>
